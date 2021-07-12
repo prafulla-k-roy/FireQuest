@@ -17,6 +17,8 @@ if ch == 1:
             w = weather_data['weather']
             weather = w[0]
             print("Date: ", date, "\tTime: ", date_time[1], "\tWeather status: ", weather['main'], "\tDescription: ", weather['description'])
+        else:
+            print("Data for the given date is not available.")
 elif ch == 2:
     date = input("Enter date (YYYY-MM-DD): ")
     for i in range(0, len(lst)):
@@ -25,6 +27,8 @@ elif ch == 2:
         if date == date_time[0]:
             wind = weather_data['wind']
             print("Wind Speed on ", date, " at time ", date_time[1], " is ", wind['speed'], " miles per hour.")
+        else:
+            print("Data for the given date is not available.")
 elif ch == 3:
     date = input("Enter date (YYYY-MM-DD): ")
     for i in range(0, len(lst)):
@@ -33,6 +37,8 @@ elif ch == 3:
         if date == date_time[0]:
             t_p = weather_data['main']
             print("Air pressure on ", date, " at time ", date_time[1], " is ", t_p['pressure'], " Pascal.")
+        else:
+            print("Data for the given date is not available.")
 elif ch == 0:
     exit()
 else:
